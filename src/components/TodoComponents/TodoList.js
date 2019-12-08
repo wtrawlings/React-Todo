@@ -4,7 +4,7 @@ import React from 'react';
 
 const TodoList = props => {
     return (
-        <div className ="todoList">
+        <div className ="todo-list">
             {/** Do Something */}
         </div>
     )
