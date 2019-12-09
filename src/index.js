@@ -4,10 +4,10 @@ import { render } from 'react-dom';
 import { preToDoList } from './components/TodoComponents/data'
 import TodoList from './components/TodoComponents/TodoList'
 
-console.log (preToDoList);
+//console.log (preToDoList);
 
 const App = props => {
-        console.log("rendering something from index...");
+        
         return (
             <div className="App">
                 <div className="header">

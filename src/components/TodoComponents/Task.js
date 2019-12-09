@@ -1,11 +1,8 @@
 import React from 'react';
 
 const Task = props => {
-    return (
-        <div className = "task">
-            {props.preToDoList.task}
-        </div>
-    )
-}
+    console.log(props);
+    return <div className = "task">{props.task.task}</div>
+};
 
 export default Task;
