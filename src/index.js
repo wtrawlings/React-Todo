@@ -32,7 +32,7 @@ class App extends React.Component {
     addTask = (task) => {
         const newTask = {
             // eslint-disable-next-line no-undef
-            task: taskText,
+            task: task,
             completed: false,
             id: Date.now()
         }
