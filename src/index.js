@@ -8,7 +8,11 @@ import TodoList from './components/TodoComponents/TodoList'
 
 class App extends React.Component {
     constructor(){
-        super()
+        super();
+        this.state = {
+            preToDoList: preToDoList
+        };
+
     }
     render() {
         return (
