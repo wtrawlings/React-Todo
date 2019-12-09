@@ -7,6 +7,6 @@ export const preToDoList = [
     {
       task: 'Bake Cookies',
       id: 1528817084358,
-      completed: true
+      completed: false
     }
   ];
