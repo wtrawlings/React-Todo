@@ -41,6 +41,16 @@ class App extends Component {
             preToDoList: [...this.state.preToDoList, newTask]
         })
     }
+    clearCompletedTasks = event => {
+        event.preventDefault();
+        console.log(this.state.preToDoList);
+        this.setState({
+          // returns the items that haven't been completed and purges
+          // the ones that have been completed (completed value is equivalent to false)
+          groceries: this.state.preToDoList.filter(item => item.completed === false)
+        });
+        console.log(this.state.preToDoList);
+      };
     
 
     
@@ -57,7 +67,9 @@ class App extends Component {
                 <TodoList 
                     preToDoList={this.state.preToDoList} 
                     toggleTask={this.toggleTask} 
+                    clearCompletedTasks={this.clearCompletedTasks}
                 />
+                {/* <ClearCompleted /> */}
             </div>
         );
     }
