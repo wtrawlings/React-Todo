@@ -8,11 +8,12 @@ import ListForm from './components/TodoComponents/TodoForm'
 
 //console.log (preToDoList);
 
-class App extends React.Component {
+class App extends Component {
     constructor(){
         super();
         this.state = {
             preToDoList: preToDoList
+            //you can just call it once if you want to...
         };
     }
 
@@ -53,8 +54,10 @@ class App extends React.Component {
                     <h1>ToDo List</h1>
                 </div>
                 <ListForm addTask={this.addTask} />
-                <TodoList preToDoList={this.state.preToDoList} 
-                toggleTask={this.toggleTask} />
+                <TodoList 
+                    preToDoList={this.state.preToDoList} 
+                    toggleTask={this.toggleTask} 
+                />
             </div>
         );
     }
