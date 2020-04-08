@@ -47,7 +47,7 @@ class App extends Component {
         this.setState({
           // returns the items that haven't been completed and purges
           // the ones that have been completed (completed value is equivalent to false)
-          groceries: this.state.preToDoList.filter(item => item.completed === false)
+          preToDoList: this.state.preToDoList.filter(item => item.completed === false)
         });
         console.log(this.state.preToDoList);
       };
