@@ -20,7 +20,7 @@ class ListForm extends React.Component {
     render(){
         return (
             <form onSubmit={this.submitHandler}>
-                <input type="text" name="taskText" value={this.state.taskText} onChange={this.changeHandler}/>
+                <input type="text" placeholder="More ToDO!" name="taskText" value={this.state.taskText} onChange={this.changeHandler}/>
                 <button type="submit">Add</button>
             </form>
         )

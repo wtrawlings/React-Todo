@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { preToDoList } from './components/TodoComponents/data'
 import TodoList from './components/TodoComponents/TodoList'
 import ListForm from './components/TodoComponents/TodoForm'
-//import { isTemplateElement } from '@babel/types';
+
 //console.log (preToDoList);
 //the App.js file is not being used for this thing
 
@@ -18,7 +18,7 @@ class App extends Component {
     }
 
     toggleTask = taskId => {
-        console.log("GOT IT", taskId);
+        //console.log("GOT IT", taskId);
         this.setState({ preToDoList: this.state.preToDoList.map(task => {
             if (taskId === task.id) {
                 return {
@@ -43,13 +43,13 @@ class App extends Component {
     }
     clearCompletedTasks = event => {
         event.preventDefault();
-        console.log(this.state.preToDoList);
+        //console.log(this.state.preToDoList);
         this.setState({
           // returns the items that haven't been completed and purges
           // the ones that have been completed (completed value is equivalent to false)
           preToDoList: this.state.preToDoList.filter(item => item.completed === false)
         });
-        console.log(this.state.preToDoList);
+        //console.log(this.state.preToDoList);
       };
     
 
@@ -69,7 +69,7 @@ class App extends Component {
                     toggleTask={this.toggleTask} 
                     clearCompletedTasks={this.clearCompletedTasks}
                 />
-                {/* <ClearCompleted /> */}
+                {/* <ClearCompleted is inside the TodoList component/> */}
             </div>
         );
     }
