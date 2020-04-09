@@ -5,8 +5,8 @@ import { preToDoList } from './components/TodoComponents/data'
 import TodoList from './components/TodoComponents/TodoList'
 import ListForm from './components/TodoComponents/TodoForm'
 //import { isTemplateElement } from '@babel/types';
-
 //console.log (preToDoList);
+//the App.js file is not being used for this thing
 
 class App extends Component {
     constructor(){
@@ -18,7 +18,7 @@ class App extends Component {
     }
 
     toggleTask = taskId => {
-        //console.log("GOT IT", taskId)
+        console.log("GOT IT", taskId);
         this.setState({ preToDoList: this.state.preToDoList.map(task => {
             if (taskId === task.id) {
                 return {
